@@ -1,7 +1,7 @@
 {
   "name": "ccs811",
   "author": "Felix Wehnert",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "license": "MIT",
