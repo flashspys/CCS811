@@ -61,14 +61,14 @@ export default class CCS811 {
         
         const buffer = Buffer.alloc(4);
         
-		const h = (humidity * 1000) >> 0; // 42.348 becomes 42348
-		let t = (temperature * 1000) >> 0; // 23.2 becomes 23200
+        const h = (humidity * 1000) >> 0; // 42.348 becomes 42348
+        let t = (temperature * 1000) >> 0; // 23.2 becomes 23200
     
         buffer[0] = ((h + 250) / 500) >> 0
-		buffer[1] = 0 // CCS811 only supports increments of 0.5 so bits 7-0 will always be zero
+        buffer[1] = 0 // CCS811 only supports increments of 0.5 so bits 7-0 will always be zero
         
         t += 25000 // Add the 25C offset
-		buffer[2] = ((t + 250) / 500) >> 0
+        buffer[2] = ((t + 250) / 500) >> 0
         buffer[3] = 0
         debug("Environment data buffer: ", buffer);
 
