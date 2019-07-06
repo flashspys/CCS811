@@ -7,7 +7,7 @@ function map(x: number, in_min: number, in_max: number, out_min: number, out_max
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-export default class CCS811 {
+export class CCS811 {
     static Address = 0x5b;
     
     i2c: I2C.I2cBus
@@ -72,6 +72,6 @@ export default class CCS811 {
         buffer[3] = 0
         debug("Environment data buffer: ", buffer);
 
-        this.i2c.writeI2cBlockSync(CCS811.Address, 0x02, 4, buffer)
+        this.i2c.writeI2cBlockSync(CCS811.Address, 0x05, 4, buffer)
     }
 }
