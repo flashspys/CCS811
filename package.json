@@ -1,7 +1,7 @@
 {
   "name": "ccs811-sensor",
   "author": "Felix Wehnert",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "license": "MIT",
@@ -11,10 +11,10 @@
     "sleep": "^6.1.0"
   },
   "devDependencies": {
-    "typescript": "^3.5.2",
     "@types/debug": "^4.1.4",
     "@types/i2c-bus": "^1.0.23",
     "@types/node": "^12.0.12",
-    "@types/sleep": "^0.0.7"
+    "@types/sleep": "^0.0.7",
+    "typescript": "^3.5.2"
   }
 }
