@@ -34,7 +34,10 @@ export class CCS811 {
         debug("0xe0: 0x"+this.i2c.readByteSync(CCS811.Address, 0xe0).toString(16))
         debug("app_ver 0x24: 0x"+this.i2c.readWordSync(CCS811.Address, 0x24).toString(16))
         debug("MEAS: 0x"+this.i2c.readWordSync(CCS811.Address, 0x01).toString(16))
-
+        debug("update MEAS!")
+        this.i2c.writeByteSync(CCS811.Address, 0x01, 0x10);
+        console.log("MEAS: 0x"+this.i2c.readByteSync(CCS811.Address, 0x01).toString(16))
+        
     }
 
     readData(): {co2: number, tvoc: number} {
