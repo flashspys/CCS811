@@ -1,7 +1,7 @@
 {
   "name": "ccs811-sensor",
   "author": "Felix Wehnert",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "license": "MIT",
